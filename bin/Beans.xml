@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+   <bean id = "ans1" class = "com.saif.Answer">
+   <constructor-arg value = "101" type = "int"></constructor-arg>
+   <constructor-arg value = "Java is a programming language."></constructor-arg>
+   <constructor-arg value = "10/10/2015" type = "String"></constructor-arg>
+   </bean>
+   
+   <bean id = "ans2" class = "com.saif.Answer">
+   <constructor-arg value = "102" type = "int"></constructor-arg>
+   <constructor-arg value = "Java is  platform." type = "String"></constructor-arg>
+   <constructor-arg value = "27/3/2021" type = "String"></constructor-arg>
+   </bean>
+   
+   <bean id = "ans3" class = "com.saif.Answer">
+   <constructor-arg value = "103" type = "int"></constructor-arg>
+   <constructor-arg value = "Java is an Island od Indonesia." type = "String"></constructor-arg>
+   <constructor-arg value = "12/6/2020" type = "String"></constructor-arg>
+   </bean>
+   
+   <bean id = "user1" class = "com.saif.User">
+   <constructor-arg value = "201" type = "int"></constructor-arg>
+   <constructor-arg value = "Saif" type = "String"></constructor-arg>
+   <constructor-arg value = "saif.iit08@gmail.com" type = "String"></constructor-arg>
+   </bean>
+   
+   <bean id = "user2" class = "com.saif.User">
+   <constructor-arg value = "202" type = "int"></constructor-arg>
+   <constructor-arg value = "Zaman" type = "String"></constructor-arg>
+   <constructor-arg value = "zaman.iit08@gmail.com" type = "String"></constructor-arg>
+   </bean>
+   
+   <bean id = "user3" class = "com.saif.User">
+   <constructor-arg value = "203" type = "int"></constructor-arg>
+   <constructor-arg value = "Sharif" type = "String"></constructor-arg>
+   <constructor-arg value = "sharif.iit08@gmail.com" type = "String"></constructor-arg>
+   </bean>
+   
+   <bean id = "q1" class = "com.saif.Question">
+   <constructor-arg value = "301" type = "int"></constructor-arg>
+   <constructor-arg value = "What is Java?" type = "String"></constructor-arg>
+   <constructor-arg>
+   <map>
+   <entry key-ref="ans1" value-ref="user1"></entry>
+   <entry key-ref = "ans2" value-ref = "user2"></entry>
+   <entry key-ref = "ans3" value-ref = "user3"></entry>
+   </map>
+   </constructor-arg>
+   </bean>
+        
+        
+</beans>
